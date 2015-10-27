@@ -1,0 +1,18 @@
+---
+# vars file for install-asterisk
+asterisk_tarball: /usr/src/asterisk.tar.gz
+asterisk_srcdir: /usr/src/asterisk/
+asterisk_url: http://downloads.asterisk.org/pub/telephony/certified-asterisk/certified-asterisk-11.6-current.tar.gz
+
+dahdi_tarball: /usr/src/dahdi.tar.gz
+dahdi_srcdir: /usr/src/dahdi/
+dahdi_url: http://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+
+libpri_tarball: /usr/src/libpri.tar.gz
+libpri_srcdir: /usr/src/libpri/
+libpri_url: http://downloads.asterisk.org/pub/telephony/libpri/libpri-1.4-current.tar.gz
+
+#asterisk_url_sounds: http://downloads.asterisk.org/pub/telephony/sounds/asterisk-core-sounds-en-ulaw-current.tar.gz
+#asterisk_path_soundstarball: /usr/src/asterisk_sounds.tar.gz
+#asterisk_path_sound: /var/lib/asterisk/sounds/en
+

@@ -1,0 +1,37 @@
+---
+- hosts: asterisk
+  remote_user: root
+  tasks:
+
+#  - name: install linux linux-headers
+#    action: shell apt-get install -y linux-headers-$(uname -r)
+
+#  - name: restart machine
+#    command: shutdown -r now "Ansible updates triggered"
+#    async: 0
+#    poll: 0
+#    ignore_errors: true
+
+#  - name: waiting for server to come back
+#    local_action: wait_for host={{ inventory_hostname }}
+#        state=started
+#    sudo: false
+
+     - name: check if a reboot is required
+       shell: "[ -f /var/run/reboot-required ]"
+       failed_when: False
+       register: reboot_required
+       changed_when: reboot_required.rc == 0
+       notify: reboot
+
+  handlers:
+     - name: reboot
+       command: shutdown -r now "Ansible updates triggered"
+       async: 0
+       poll: 0
+       ignore_errors: true
+
+     - name: waiting for server to come back
+       local_action: wait_for host={{ inventory_hostname }}
+            state=started
+       sudo: false

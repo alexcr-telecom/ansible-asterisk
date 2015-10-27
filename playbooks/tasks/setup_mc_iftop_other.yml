@@ -1,0 +1,17 @@
+---
+#  - name: Update apt
+#    apt: update_cache=yes
+#    sudo: yes
+
+  - name: Install required packages
+    apt: name={{ item }}
+    sudo: yes
+    with_items:
+    - aptitude
+    - mc
+    - htop
+    - iftop
+    - vim
+
+  - name: Debug
+    debug: msg={{ ansible_distribution }}

@@ -1,0 +1,7 @@
+---
+#package_name: "httpd" #Apache
+
+#Enviroment variables
+#proxy_env:
+#  INFOBOXCLOUD_API_KEY: "{{ lookup('env', 'INFOBOXCLOUD_API_KEY') }}"
+#  INFOBOXCLOUD_LOGIN: "{{ ('env', 'INFOBOXCLOUD_LOGIN') }}"

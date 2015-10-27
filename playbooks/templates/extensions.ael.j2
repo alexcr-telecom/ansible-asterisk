@@ -1,0 +1,27 @@
+//
+// Example AEL config file
+//
+//
+// Static extension configuration file, used by
+// the pbx_ael module. This is where you configure all your
+// inbound and outbound calls in Asterisk.
+//
+// This configuration file is reloaded
+// - With the "ael reload" command in the CLI
+// - With the "reload" command (that reloads everything) in the CLI
+
+// The "Globals" category contains global variables that can be referenced
+// in the dialplan by using the GLOBAL dialplan function:
+//  ${GLOBAL(VARIABLE)}
+// ${${GLOBAL(VARIABLE)}} or ${text${GLOBAL(VARIABLE)}} or any hybrid
+// Unix/Linux environmental variables are reached with the ENV dialplan
+// function: ${ENV(VARIABLE)}
+//
+
+// NOTE! NOTE! NOTE!
+// Asterisk by default will load both extensions.conf and extensions.ael files.
+// Upon loading these files the dialplans generated from both with be merged,
+// so you must make sure that you don't have any overlapping contexts or global
+// variables. If you do, then unexpected behavior may result when the data is
+// merged.
+// NOTE! NOTE! NOTE!

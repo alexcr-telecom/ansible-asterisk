@@ -1,0 +1,8 @@
+handler:
+  - name: reboot
+    command: shutdown -r now "Ansible updates triggered"
+    async: 0
+    poll: 0
+    ignore_errors: true
+
+

@@ -1,0 +1,10 @@
+[asterisk]
+#add server ip
+#62.76.47.151
+
+
+#localhost ansible_connection=local
+
+
+#[asterisk-service.com]
+#asterisk-service.com

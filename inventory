@@ -1,0 +1,10 @@
+[asterisk]
+#46.101.245.147
+#85.143.218.38
+#104.236.5.126
+
+#localhost ansible_connection=local
+
+
+#[asterisk-service.com]
+#asterisk-service.com

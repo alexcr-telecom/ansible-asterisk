@@ -1,0 +1,38 @@
+;;; odbc setup file
+
+; ENV is a global set of environmental variables that will get set.
+; Note that all environmental variables can be seen by all connections,
+; so you can't have different values for different connections.
+[ENV]
+
+;INFORMIXSERVER => my_special_database
+;INFORMIXDIR => /opt/informix
+;ORACLE_HOME => /home/oracle
+
+; All other sections are arbitrary names for database connections.
+
+;
+; The context name is what will be used in other configuration files, such
+; as extconfig.conf and func_odbc.conf, to reference this connection.
+[asterisk]
+enabled => no
+dsn => asterisk
+;username => myuser
+;password => mypass
+pre-connect => yes
+;sanitysql => select 1
+;idlecheck => 3600
+;share_connections => yes
+;limit => 5
+;forcecommit => no
+;isolation => repeatable_read
+;backslash_is_escape => yes
+;connect_timeout => 10
+;negative_connection_cache => 300
+
+[mysql2]
+enabled => no
+dsn => MySQL-asterisk
+username => myuser
+password => mypass
+pre-connect => yes

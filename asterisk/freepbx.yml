@@ -1,0 +1,31 @@
+---
+- name: Install FreePBX
+  hosts: asterisk
+  remote_user: root
+  # remote_user: user
+  # sudo: yes
+
+  roles:
+#    - asterisk
+#    - mysql 
+    - freepbx
+#    - php-fpm
+#    - wordpress
+
+  vars_files:
+    - vars/asterisk.yml
+    
+#---
+#- hosts: asterisk
+#  remote_user: root
+#  vars_files:
+#  - vars/global.yml
+#  - vars/asterisk.yml
+#  tasks:
+#  - include: tasks/os_update.yml
+#  - include: tasks/setup_mc_iftop_other.yml
+#  - include: tasks/setup_apache.yml
+#  - include: tasks/setup_mysql.yml
+#  - include: tasks/setup_pgsql.yml
+#  - include: tasks/setup_asterisk.yml
+#  - include: tasks/config_asterisk.yml

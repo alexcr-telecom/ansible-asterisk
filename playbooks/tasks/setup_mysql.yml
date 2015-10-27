@@ -1,0 +1,12 @@
+- name: Install MySQL server and client
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - mysql-common
+    - mysql-server
+    - mysql-client
+    - python-mysqldb
+
+- name: Start mysql 
+  service: name=mysql state=restarted
+  sudo: yes

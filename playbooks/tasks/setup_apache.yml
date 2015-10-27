@@ -1,0 +1,11 @@
+---
+- name: Install apache2 server
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - apache2
+    - ssl-cert
+
+- name: Starting apache2 service
+  service: name=apache2 state=restarted
+  sudo: yes
